@@ -1,11 +1,12 @@
-import { combineReducers } from 'redux'
+import { combineReducers } from "redux";
 
 const articles = (state = [], action) => {
-    switch(action.type) {
-        // add case "FETCH_ARTICLES"
-        default:
-            return state
-    }
-}
+  switch (action.type) {
+    case "FETCH_ARTICLES":
+      return action.value;
+    default:
+      return state;
+  }
+};
 
-export default combineReducers({ articles })
+export default combineReducers({ articles });
